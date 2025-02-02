@@ -6,6 +6,7 @@
   --background: rgb(244, 249, 252);
   --foreground: rgb(15, 27, 97);
   --link: oklch(.511 .262 276.966);
+  --githubLogo: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
     --background: rgb(15, 23, 42);
     --foreground: rgb(148, 163, 184);
     --link: #09B6E6;
+    --githubLogo: white;
   }
 }
 
@@ -28,4 +30,74 @@ body {
 
 .link {
   color: var(--link);
+}
+
+.projects {
+
+}
+
+.projectCard {
+  background-color: #2b2b2b;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+
+  .title {
+    color:red;
+    font-size: 30px;
+  }
+
+  .description {
+    color: white;
+  }
+
+.techstack {
+  margin-top: 10px;
+  width: 42rem;
+}
+
+  .tech {
+    background-color: lightgreen;
+    color: darkgreen;
+    border-radius: 5px;
+    padding: 6px;
+    margin-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    width: fit-content;
+    display: inline;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linkedin {
+  fill: var(--foreground);
+
+  &:hover {
+    fill: rgb(10, 102, 194);
+  }
+}
+
+.github {
+  fill: var(--foreground);
+
+  &:hover {
+    fill: var(--githubLogo);
+  }
+}
+
+.email {
+  color: var(--foreground);
+
+  &:hover {
+    color: var(--link);
+  }
 }
